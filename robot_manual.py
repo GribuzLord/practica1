@@ -20,7 +20,6 @@ x=5
 y=3
 plt.scatter(x,y)
 
-
 while True:
     print(mapa)
     plt.imshow(mapa,cmap="grey")
@@ -28,16 +27,12 @@ while True:
     plt.scatter(x,y)
     print("Hay algun objeto que bloquee el movimiento? (Si/no)")
     entrada=input() #Regresa una variable tipo string
-    
-    
-    ##if y-1 >= 0 and mapa[y-1][x] == 1
     if(entrada == "Si" or entrada=="si"):
         
         movimientos=random.randint(0,1)
         print(f"Avanzando hacia: {mov[movimientos]}")
         
         if movimientos==0 and x-1 >= 0 and mapa[y][x-1] == 1:
-        #if respuesta[res] == "2" and x-1 >= 0 and mapa[y][x-1] == 1:
             x=x-1
         elif movimientos==1 and x-1 >= 0 and mapa[y][x+1] == 1:
             x=x+1
@@ -47,4 +42,3 @@ while True:
     else:
         print("Por ahi no pa")
     print(x,y)
-   #plt.scatter(x,y)
